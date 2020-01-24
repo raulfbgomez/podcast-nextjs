@@ -1,0 +1,28 @@
+{
+  "name": "podcast-nextjs",
+  "version": "1.0.0",
+  "description": "Aplicacion de Podcast utilizando Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulfbgomez/podcast-nextjs.git"
+  },
+  "keywords": [],
+  "author": "@raulfbgomez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raulfbgomez/podcast-nextjs/issues"
+  },
+  "homepage": "https://github.com/raulfbgomez/podcast-nextjs#readme",
+  "dependencies": {
+    "isomorphic-fetch": "2.2.1",
+    "next": "9.2.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  }
+}
