@@ -1,7 +1,8 @@
 import Link from 'next/link'
+import slug from '../helpers/slug'
 
 const PodcastList = (props) => {
-  const { audioClips, onClickPodcast } = props
+  const { podcasts, onClickPodcast } = props
 
   function secondsToHms(time) {
     time = Number(time);
@@ -17,17 +18,15 @@ const PodcastList = (props) => {
 
   return (
     <div className='items'>
-      {audioClips.map(audio => (
-        <Link 
-          key={audio.id} 
-          href={`/podcast?id=${audio.id}`}
-          onclick={ event => onClickPodcast(event, podcast)}
+      {podcasts.map(podcast => (
+        <a href={`/${slug(podcast.channel.title)}.${podcast.channel.id}/${slug(podcast.title)}.${podcast.id}`}
+          className='item'
+          key={podcast.id}
+          onClick={ (event) => onClickPodcast(event, podcast) }
         >
-          <a className='item'>
-            <p>{ audio.title }</p>
-            <p>{ secondsToHms(audio.duration) }</p>
-          </a>
-        </Link>
+            <p>{ podcast.title }</p>
+            <p>{ secondsToHms(podcast.duration) }</p>
+        </a>
       ))}
       <style jsx>{`
         .items {
