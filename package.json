@@ -21,7 +21,7 @@
   "homepage": "https://github.com/raulfbgomez/podcast-nextjs#readme",
   "dependencies": {
     "isomorphic-fetch": "2.2.1",
-    "next": "9.2.1",
+    "next": "11.1.3",
     "next-routes": "1.4.2",
     "nprogress": "0.2.0",
     "react": "16.12.0",
